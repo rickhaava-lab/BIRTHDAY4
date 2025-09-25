@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What's the code :3</title>
+</head>
+<body>
+  <h1>what's the code :3</h1>
+  <form id="form">
+    <input id="pwd" type="password" placeholder="enter code">
+    <button type="submit">unlock</button>
+  </form>
+  <p id="msg"></p>
+
+  <script>
+    const correct = "201";
+    const form = document.getElementById("form");
+    const input = document.getElementById("pwd");
+    const msg = document.getElementById("msg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (input.value === correct) {
+        msg.textContent = "popopo";
+      } else {
+        msg.textContent = "wrong code — try again";
+      }
+    });
+  </script>
+</body>
+</html>
